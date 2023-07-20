@@ -1,6 +1,6 @@
 # Quiz-Platform
 
-## A Quiz Platform application 📱 built using react ⚛️ where you can create your own quiz and play.
+## A Quiz Platform application built using react , where you can create your own quiz and play.
 
 
 ### Deployed link
