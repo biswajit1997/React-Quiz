@@ -12,19 +12,32 @@ const Addquiz = () => {
   };
   return (
     <Layout>
-      <Box className="Box1">
+      <Box className="Box1"
+       sx = {{
+        height: '30%',
+        width: '50%',
+      }}
+      >
         {popup ? (
-          <Box className="Box2">
-            <Dialog open={true} aria-labelledby="responsive-dialog-title">
+          <Box className="Box2"
+          sx = {{
+            height: '30%',
+            width: '50%',
+          }}
+          >
+            <Dialog open={true}
+           
+             aria-labelledby="responsive-dialog-title">
               <DialogTitle
                 id="responsive-dialog-title"
-                sx={{ bgcolor: "Cornsilk" }}
+                sx={{ bgcolor: "#fff",
+               }}
               >
                 {"Select Question Type"}
               </DialogTitle>
               <DialogActions
                 sx={{
-                  bgcolor: "Cornsilk",
+                  bgcolor: "#fff",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -34,7 +47,9 @@ const Addquiz = () => {
                   sx={{
                     fontSize: "16px",
                     marginBottom: "10px",
-                    ":hover": { bgcolor: "rgb(206, 78, 78)", color: "white" },
+                    bgcolor: "#4f7be9",
+                    color: '#fff',
+                    ":hover": { bgcolor: "#4f7be9", color: "#fff" },
                   }}
                   onClick={popupfunc}
                   variant="outlined"

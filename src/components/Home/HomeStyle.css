@@ -3,8 +3,8 @@
 }
 .Home-Box1 a {
   text-decoration: none;
-  color: darkred;
-  font-size: 40px;
+  color: #000;
+  font-size: 26px;
   font-weight: bold;
   padding: 5px 10px;
   width: 43vw;
@@ -13,9 +13,12 @@
 .content-box {
   cursor: pointer;
   margin-right: 20px;
-  &:hover {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  /* &:hover {
     transform: scale(0.8);
-  }
+  } */
 }
 @media screen and (max-width: 750px) {
   .Home-Box1 a {

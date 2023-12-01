@@ -26,7 +26,20 @@ const MyQuiz = () => {
     dispatch(toggleActive(id));
   };
   const Quiz = useSelector((state) => state.reducer.quiz);
+  
 
+  const date =(el) =>{
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  const formattedDate = `${el.createdOn.getDate()} ${months[el.createdOn.getMonth()]}, ${el.createdOn.getFullYear()}`;
+
+  const hours = el.createdOn.getHours();
+  const minutes = el.createdOn.getMinutes();
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+  const formattedTime = `${hours % 12 || 12}:${minutes < 10 ? '0' : ''}${minutes} ${ampm}`;
+    return<>{formattedDate} <br />
+    {formattedTime}</>
+  }
   return (
     <Layout>
       <Container>
@@ -35,9 +48,9 @@ const MyQuiz = () => {
           <Button
             component={Link}
             to={"/newquiz"}
-            variant="outlined"
+            // variant="outlined"
             color="error"
-            sx={{ ":hover": { bgcolor: "rgb(206, 78, 78)", color: "white" } }}
+            sx={{ ":hover": { bgcolor: "#4f7be9", color: "white" } }}
           >
             Create New Quiz
           </Button>
@@ -112,10 +125,7 @@ const MyQuiz = () => {
                           </div>
                         </td>
                         <td className="time">
-                          {el.createdOn.getDate()}/{el.createdOn.getMonth()}/
-                          {el.createdOn.getFullYear()}
-                          <br />
-                          {el.createdOn.getHours()}:{el.createdOn.getMinutes()}
+                        {date(el)}
                         </td>
                         <td>
                           <Button

@@ -9,8 +9,8 @@ import MyQuiz from "../../images/MyQuiz.jpg";
 import PlayQuiz from "../../images/PlayQuiz.jpg";
 
 const Item = styled(Paper)(({ theme }) => ({
-  height: "350px",
-  width: "30vw",
+  height: "265px",
+  width: "33vw",
   padding: theme.spacing(1),
   display: "flex",
 }));
@@ -22,15 +22,21 @@ const Home = () => {
         <Stack
           direction="row"
           className="stack"
-          sx={{ display: { xs: "block", sm: "flex" } }}
+          sx={{
+            display: { xs: 'block', sm: 'flex' },
+            justifyContent: 'center', // Center horizontally
+            alignItems: 'center',     // Center vertically
+            height: '90vh',  
+          }}
         >
           <Item
             className="content-box"
             sx={{
-              backgroundImage: `url(${NewQuiz})`,
+              // backgroundImage: `url(${NewQuiz})`,
               backgroundSize: "cover",
               backgroundPosition: "center",
               borderRadius: "20px",
+              border: '1px solid #000',
               "@media(max-width:600px)": {
                 height: "250px",
                 width: "300px",
@@ -44,7 +50,8 @@ const Home = () => {
             className="content-box"
             sx={{
               maxWidth: "350",
-              backgroundImage: `url(${MyQuiz})`,
+              // backgroundImage: `url(${MyQuiz})`,
+              border: '1px solid #000',
               backgroundSize: "cover",
               borderRadius: "20px",
               "@media(max-width:600px)": { height: "250px", width: "300px" },
@@ -52,7 +59,7 @@ const Home = () => {
           >
             <Link to="/Quiz">My Quizes</Link>
           </Item>
-          <Item
+          {/* <Item
             className="content-box"
             sx={{
               maxWidth: "350",
@@ -67,7 +74,7 @@ const Home = () => {
             }}
           >
             <Link to="/PlayQuiz">Play Quiz</Link>
-          </Item>
+          </Item> */}
         </Stack>
       </Box>
     </Layout>

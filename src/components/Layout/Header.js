@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import "./HeaderStyle.css";
 const Header = () => {
   const [webOpen, setwebOpen] = useState(false);
+  let path = window.location.pathname
   //clickondrawer
   const clickondrawer = () => {
     setwebOpen(!webOpen);
@@ -43,7 +44,7 @@ const Header = () => {
   return (
     <>
       <Box>
-        <AppBar component={"nav"} sx={{ backgroundColor: "BlanchedAlmond	" }}>
+        <AppBar component={"nav"} sx={{ backgroundColor: "#fff" }}>
           <Toolbar>
             <IconButton
               aria-label="open drawer"
@@ -61,16 +62,17 @@ const Header = () => {
               <Box className="Logo"></Box>
             </Typography>
             <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              {console.log(path === '/' ? 'nav-act-clr':'')}
               <ul className="navigation-menu">
-                <li>
+                <li className={`${path === '/' ? 'nav-act-clr':''}`}>
                   <Link to={"/"}>Home</Link>
                 </li>
-                <li>
+                <li className={`${path === '/Quiz' ? 'nav-act-clr':''}`}>
                   <Link to={"/Quiz"}>My Quizes</Link>
                 </li>
-                <li>
+                {/* <li>
                   <Link to={"/PlayQuiz"}>Play Quiz</Link>
-                </li>
+                </li> */}
               </ul>
             </Box>
           </Toolbar>

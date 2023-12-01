@@ -17,7 +17,7 @@
 }
 .navigation-menu li a {
   text-decoration: none;
-  color: darkred;
+  color: #000;
   font-size: 18px;
   &:hover {
     font-weight: bold;
@@ -51,4 +51,8 @@
   height: 50px;
   width: 160px;
   margin: 10px 0px 10px 40px;
+}
+.nav-act-clr a{
+  color: #4f7be9 !important;
+  font-weight: 500;
 }
