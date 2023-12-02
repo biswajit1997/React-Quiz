@@ -130,3 +130,7 @@ input {
     width: 80vw;
   }
 }
+.lt{
+  margin-left: 0px !important;
+  margin-right: 8px;
+}
