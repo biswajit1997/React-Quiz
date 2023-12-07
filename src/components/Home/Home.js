@@ -29,11 +29,13 @@ const Home = () => {
             height: '90vh',  
           }}
         >
+          <Link to="/newquiz">
           <Item
             className="content-box"
             sx={{
               // backgroundImage: `url(${NewQuiz})`,
               backgroundSize: "cover",
+              backgroundColor: '#0083ff21',
               backgroundPosition: "center",
               borderRadius: "20px",
               border: '1px solid #000',
@@ -44,8 +46,10 @@ const Home = () => {
               },
             }}
           >
-            <Link to="/newquiz">Create New Quiz</Link>
+            Create New Quiz
           </Item>
+          </Link>
+          <Link to="/Quiz">
           <Item
             className="content-box"
             sx={{
@@ -53,12 +57,14 @@ const Home = () => {
               // backgroundImage: `url(${MyQuiz})`,
               border: '1px solid #000',
               backgroundSize: "cover",
+              backgroundColor: '#ff900057',
               borderRadius: "20px",
               "@media(max-width:600px)": { height: "250px", width: "300px" },
             }}
           >
-            <Link to="/Quiz">My Quizes</Link>
+            My Quizes
           </Item>
+          </Link>
           {/* <Item
             className="content-box"
             sx={{

@@ -200,6 +200,8 @@ const MCQSingle = () => {
                   color="error"
                   onClick={addOptionHandler}
                   sx={{
+                    borderColor: '#000',
+                    color: '#000',
                     height: "40px",
                     width: "160px",
                     marginLeft: "15px",
@@ -209,8 +211,9 @@ const MCQSingle = () => {
                       padding: "2px",
                     },
                     ":hover": {
-                      bgcolor: "rgb(206, 78, 78)",
-                      color: "white",
+                      bgcolor: "#fff",
+                      color: "#000",
+                      borderColor: '#000'
                     },
                   }}
                 >
@@ -233,8 +236,8 @@ const MCQSingle = () => {
                     key={i}
                     style={
                       el.correct
-                        ? { background: "#32a84e" }
-                        : { background: "#D1D1D1" }
+                        ? { border: "1px solid #32a84e" }
+                        : { border: "1px solid #D1D1D1" }
                     }
                   >
                     <p style={{ overflowWrap: "break-word", width: "100px" }}>
@@ -256,7 +259,9 @@ const MCQSingle = () => {
                 variant="outlined"
                 color="error"
                 sx={{
-                  ":hover": { bgcolor: "rgb(206, 78, 78)", color: "white" },
+                  borderColor: '#000',
+                  color: '#000',
+                  ":hover": { bgcolor: "#fff", color: "#000", borderColor: '#000' },
                 }}
                 onClick={addQuestionHandler}
               >
@@ -268,10 +273,14 @@ const MCQSingle = () => {
             <hr />
             <Button
               onClick={onSaveHandler}
+              
               variant="outlined"
               color="error"
               sx={{
-                ":hover": { bgcolor: "rgb(206, 78, 78)", color: "white" },
+                bgcolor: "#fff",
+                color: "#000",
+                borderColor: '#000',
+                ":hover": { bgcolor: "#fff", color: "#000", borderColor: '#000' },
               }}
             >
               Submit

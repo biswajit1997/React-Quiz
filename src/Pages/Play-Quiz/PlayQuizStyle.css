@@ -1,5 +1,5 @@
 .PlayQuiz-Box {
-  background-color: blanchedalmond;
+  background-color: #fff;
   height: 100%;
   width: 70vw;
   padding: 0px 20px;
@@ -44,15 +44,20 @@ label {
 .PlayQuiz-Option {
   width: 200px;
   height: 50px;
-  background-color: NavajoWhite;
+  background-color: #fff;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 10px;
+  border: 1px solid #000;
   margin-right: 30px;
   margin-bottom: 40px;
-  box-shadow: 1px 1px 1px gray;
+  /* box-shadow: 1px 1px 1px gray; */
+  
+}
+.PlayQuiz-Option:hover{
+  border: 1px solid green;
 }
 .PlayQuiz-ViewOption {
   height: 100px;

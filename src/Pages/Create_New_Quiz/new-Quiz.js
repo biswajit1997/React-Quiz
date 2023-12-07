@@ -4,20 +4,28 @@ import { Box, Dialog, DialogActions, DialogTitle } from "@mui/material";
 import Button from "@mui/material/Button";
 import MCQSingle from "./MCQ-Single";
 import CloseIcon from '@mui/icons-material/Close';
+import { useNavigate } from 'react-router-dom';
+
 
 const Addquiz = () => {
   const [popup, setPopup] = useState(true);
+  const [open, setOpen] = useState(true);
+  const navigate = useNavigate();
+
   //this func is show the option 
   const popupfunc = () => {
     setPopup(false);
+  };
+  const handleClose = () => {
+    navigate('/');
   };
   return (
     <Layout
     >
       <Box className="Box1"
         sx={{
-          height: '30%',
-          width: '50%',
+          // height: '30%',
+          // width: '50%',
           padding:'16px'
         }}
       >
@@ -29,9 +37,9 @@ const Addquiz = () => {
              
             }}
           >
-            <Dialog open={true} aria-labelledby="responsive-dialog-title">
+            <Dialog open={open} aria-labelledby="responsive-dialog-title">
                 <Box component="div" className="lt" sx={{ display: 'flex',justifyContent: 'end', marginTop: '5px' }}>
-                  <CloseIcon />
+                  <CloseIcon  onClick={handleClose}/>
                 </Box>
               <DialogTitle
                 id="responsive-dialog-title"
@@ -61,7 +69,7 @@ const Addquiz = () => {
                       marginBottom: "10px",
                       bgcolor: "#4f7be9",
                       color: '#fff',
-                      ":hover": { bgcolor: "#4f7be9", color: "#fff" },
+                      ":hover": { bgcolor: "#4f7be9", color: "#fff", borderColor:'#000' },
                     }}
                     onClick={popupfunc}
                     variant="outlined"
@@ -75,9 +83,10 @@ const Addquiz = () => {
                     sx={{
                       fontSize: "16px",
                       marginBottom: "10px",
-                      bgcolor: "#4f7be9",
-                      color: '#fff',
-                      ":hover": { bgcolor: "#4f7be9", color: "#fff" },
+                      // bgcolor: "#4f7be9",
+                      borderColor:'#000',
+                      color: '#000',
+                      ":hover": { bgcolor: "#4f7be9", color: "#fff", borderColor:'#000' },
                     }}
                     onClick={popupfunc}
                     variant="outlined"
@@ -92,9 +101,10 @@ const Addquiz = () => {
                     sx={{
                       fontSize: "16px",
                       marginBottom: "10px",
-                      bgcolor: "#4f7be9",
-                      color: '#fff',
-                      ":hover": { bgcolor: "#4f7be9", color: "#fff" },
+                      borderColor:'#000',
+                      // bgcolor: "#4f7be9",
+                      color: '#000',
+                      ":hover": { bgcolor: "#4f7be9", color: "#fff", borderColor:'#000' },
                     }}
                     onClick={popupfunc}
                     variant="outlined"
@@ -108,9 +118,10 @@ const Addquiz = () => {
                     sx={{
                       fontSize: "16px",
                       marginBottom: "10px",
-                      bgcolor: "#4f7be9",
-                      color: '#fff',
-                      ":hover": { bgcolor: "#4f7be9", color: "#fff" },
+                      borderColor:'#000',
+                      // bgcolor: "#4f7be9",
+                      color: '#000',
+                      ":hover": { bgcolor: "#4f7be9", color: "#fff",  borderColor:'#000'},
                     }}
                     onClick={popupfunc}
                     variant="outlined"
